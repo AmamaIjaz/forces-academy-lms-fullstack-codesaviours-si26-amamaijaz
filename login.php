@@ -38,7 +38,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (mysqli_stmt_fetch($stmt)) {
 
-                if (password_verify($password, $student_password)) {
+                /*
+                 * Check that the password value is not null
+                 * before passing it to password_verify().
+                 */
+                if (
+                    $student_password !== null &&
+                    password_verify($password, $student_password)
+                ) {
 
                     $_SESSION['student_id'] = $student_id;
                     $_SESSION['student_name'] = $student_name;
@@ -93,24 +100,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <h2>Student Login</h2>
 
-
     <?php if (!empty($error)): ?>
 
         <p class="error">
-            <?php echo htmlspecialchars($error); ?>
+            <?php echo htmlspecialchars($error, ENT_QUOTES, 'UTF-8'); ?>
         </p>
 
     <?php endif; ?>
 
-
-    <?php if (isset($_GET['registered']) && $_GET['registered'] == '1'): ?>
+    <?php if (isset($_GET['registered']) && $_GET['registered'] === '1'): ?>
 
         <p class="success">
             Registration successful. Please login.
         </p>
 
     <?php endif; ?>
-
 
     <form method="POST" action="">
 
@@ -123,8 +127,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             id="email"
             name="email"
             required
+            autocomplete="email"
         >
-
 
         <label for="password">
             Password:
@@ -135,15 +139,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             id="password"
             name="password"
             required
+            autocomplete="current-password"
         >
-
 
         <button type="submit">
             Login
         </button>
 
     </form>
-
 
     <p class="account-link">
 
