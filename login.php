@@ -1,7 +1,8 @@
 <?php
 
-require_once 'config/db.php';
 session_start();
+
+require_once 'config/db.php';
 
 $error = '';
 
@@ -25,20 +26,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($stmt) {
 
             mysqli_stmt_bind_param($stmt, 's', $email);
+
             mysqli_stmt_execute($stmt);
 
-            $result = mysqli_stmt_get_result($stmt);
-            $student = mysqli_fetch_assoc($result);
+            mysqli_stmt_bind_result(
+                $stmt,
+                $student_id,
+                $student_name,
+                $student_password
+            );
 
-            if ($student && password_verify($password, $student['password'])) {
+            if (mysqli_stmt_fetch($stmt)) {
 
-                $_SESSION['student_id'] = $student['id'];
-                $_SESSION['student_name'] = $student['full_name'];
+                if (password_verify($password, $student_password)) {
 
-                mysqli_stmt_close($stmt);
+                    $_SESSION['student_id'] = $student_id;
+                    $_SESSION['student_name'] = $student_name;
 
-                header('Location: dashboard.php');
-                exit;
+                    mysqli_stmt_close($stmt);
+
+                    header('Location: dashboard.php');
+                    exit;
+
+                } else {
+
+                    $error = 'Invalid email or password.';
+                }
 
             } else {
 
@@ -49,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         } else {
 
-            $error = 'Database query failed.';
+            $error = 'Database query failed: ' . mysqli_error($conn);
         }
     }
 }
@@ -60,12 +73,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Student Login | Forces Academy LMS</title>
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -74,23 +93,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <h2>Student Login</h2>
 
+
     <?php if (!empty($error)): ?>
+
         <p class="error">
             <?php echo htmlspecialchars($error); ?>
         </p>
+
     <?php endif; ?>
 
 
     <?php if (isset($_GET['registered']) && $_GET['registered'] == '1'): ?>
+
         <p class="success">
             Registration successful. Please login.
         </p>
+
     <?php endif; ?>
 
 
     <form method="POST" action="">
 
-        <label for="email">Email:</label>
+        <label for="email">
+            Email:
+        </label>
 
         <input
             type="email"
@@ -100,7 +126,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         >
 
 
-        <label for="password">Password:</label>
+        <label for="password">
+            Password:
+        </label>
 
         <input
             type="password"
@@ -110,17 +138,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         >
 
 
-        <button type="submit">Login</button>
+        <button type="submit">
+            Login
+        </button>
 
     </form>
 
 
     <p class="account-link">
+
         Don't have an account?
-        <a href="register.php">Register here</a>
+
+        <a href="register.php">
+            Register here
+        </a>
+
     </p>
 
 </div>
 
 </body>
+
 </html>

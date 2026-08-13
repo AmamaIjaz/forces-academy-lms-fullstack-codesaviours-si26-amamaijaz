@@ -3,7 +3,7 @@
 $host = 'localhost';
 $user = 'root';
 $password = '';
-$database = 'forces_academy_lms';
+$database = 'forces_academy_lms1';
 
 $conn = mysqli_connect($host, $user, $password, $database);
 

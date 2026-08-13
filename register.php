@@ -18,62 +18,122 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         empty($full_name) ||
         empty($email) ||
         empty($password) ||
+        empty($confirm) ||
         empty($roll_number) ||
         empty($class)
     ) {
+
         $error = 'All fields are required.';
-    } elseif ($password !== $confirm) {
-        $error = 'Passwords do not match.';
+
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
         $error = 'Please enter a valid email address.';
+
+    } elseif ($password !== $confirm) {
+
+        $error = 'Passwords do not match.';
+
     } else {
 
-        $hashed = password_hash($password, PASSWORD_DEFAULT);
+        /* Check whether email or roll number already exists */
 
-        $sql = "INSERT INTO students
-                (full_name, email, password, roll_number, class)
-                VALUES (?, ?, ?, ?, ?)";
+        $check_sql = "
+            SELECT id
+            FROM students
+            WHERE email = ? OR roll_number = ?
+        ";
 
-        $stmt = mysqli_prepare($conn, $sql);
+        $check_stmt = mysqli_prepare($conn, $check_sql);
 
-        if ($stmt) {
+        if ($check_stmt) {
 
             mysqli_stmt_bind_param(
-                $stmt,
-                'sssss',
-                $full_name,
+                $check_stmt,
+                'ss',
                 $email,
-                $hashed,
-                $roll_number,
-                $class
+                $roll_number
             );
 
-            if (mysqli_stmt_execute($stmt)) {
+            mysqli_stmt_execute($check_stmt);
 
-                mysqli_stmt_close($stmt);
+            mysqli_stmt_store_result($check_stmt);
 
-                header('Location: login.php?registered=1');
-                exit;
+            if (mysqli_stmt_num_rows($check_stmt) > 0) {
+
+                $error = 'Email or roll number already exists.';
 
             } else {
 
-                if (mysqli_errno($conn) == 1062) {
-                    $error = 'Email or roll number already exists.';
+                $hashed = password_hash(
+                    $password,
+                    PASSWORD_DEFAULT
+                );
+
+                $sql = "
+                    INSERT INTO students
+                    (
+                        full_name,
+                        email,
+                        password,
+                        roll_number,
+                        class
+                    )
+                    VALUES (?, ?, ?, ?, ?)
+                ";
+
+                $stmt = mysqli_prepare($conn, $sql);
+
+                if ($stmt) {
+
+                    mysqli_stmt_bind_param(
+                        $stmt,
+                        'sssss',
+                        $full_name,
+                        $email,
+                        $hashed,
+                        $roll_number,
+                        $class
+                    );
+
+                    if (mysqli_stmt_execute($stmt)) {
+
+                        mysqli_stmt_close($stmt);
+                        mysqli_stmt_close($check_stmt);
+
+                        header(
+                            'Location: login.php?registered=1'
+                        );
+
+                        exit;
+
+                    } else {
+
+                        $error =
+                            'Registration failed: ' .
+                            mysqli_error($conn);
+                    }
+
+                    mysqli_stmt_close($stmt);
+
                 } else {
-                    $error = 'Registration failed. Please try again.';
+
+                    $error =
+                        'Database query preparation failed: ' .
+                        mysqli_error($conn);
                 }
             }
 
-            mysqli_stmt_close($stmt);
+            mysqli_stmt_close($check_stmt);
 
         } else {
-            $error = 'Database query preparation failed.';
+
+            $error =
+                'Could not check student information.';
         }
     }
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
