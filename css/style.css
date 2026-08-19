@@ -1578,3 +1578,946 @@ select:focus-visible {
         border: 1px solid #777;
     }
 }
+/* =========================================================
+   WEEK 3 - ASSIGNMENTS
+   ========================================================= */
+
+.assignment-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+
+/* Assignment card */
+
+.assignment-card {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 330px;
+
+    padding: 23px;
+
+    background: var(--light);
+
+    border: 1px solid var(--border);
+
+    border-top: 4px solid var(--navy);
+
+    border-radius: 11px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.assignment-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+
+/* Top section */
+
+.assignment-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+}
+
+
+/* Course name */
+
+.assignment-course {
+    display: inline-block;
+
+    color: var(--navy);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    text-transform: uppercase;
+}
+
+
+/* Assignment title */
+
+.assignment-card h2 {
+    margin: 0 0 12px;
+
+    color: var(--navy);
+
+    font-size: 19px;
+
+    line-height: 1.35;
+}
+
+
+/* Description */
+
+.assignment-description {
+    flex-grow: 1;
+
+    margin: 0 0 20px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+
+/* Footer */
+
+.assignment-footer {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* Due label */
+
+.due-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+/* Due date */
+
+.assignment-footer strong {
+    color: var(--navy);
+
+    font-size: 13px;
+}
+
+
+/* Submitted badge */
+
+.submission-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.submitted-badge {
+    background: var(--cream);
+
+    color: var(--navy);
+
+    border: 1px solid var(--cream-dark);
+}
+
+
+/* Already submitted */
+
+.already-submitted {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 9px 12px;
+
+    background: var(--cream);
+
+    color: var(--navy);
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SUBMISSION PAGE
+   ========================================================= */
+
+.submission-container {
+    width: 100%;
+
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+
+.submission-card {
+    padding: 30px;
+
+    background: var(--light);
+
+    border: 1px solid var(--border);
+
+    border-top: 4px solid var(--navy);
+
+    border-radius: 11px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.submission-card h2 {
+    margin: 8px 0 12px;
+
+    color: var(--navy);
+
+    font-size: 23px;
+}
+
+
+.submission-card > p {
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+
+/* Submission due date */
+
+.submission-due {
+    padding: 12px 15px;
+
+    margin: 20px 0;
+
+    background: var(--cream-light);
+
+    color: var(--navy);
+
+    border-left: 4px solid var(--navy);
+
+    border-radius: 6px;
+}
+
+
+/* Upload form */
+
+.upload-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.upload-form label {
+    color: var(--navy);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.upload-form input[type="file"] {
+    width: 100%;
+
+    padding: 12px;
+
+    background: var(--light);
+
+    color: var(--navy);
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+.upload-form input[type="file"]:focus {
+    outline: none;
+
+    border-color: var(--navy);
+
+    box-shadow:
+        0 0 0 3px rgba(10, 41, 71, 0.10);
+}
+
+
+.upload-form small {
+    margin-bottom: 10px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* Form messages */
+
+.form-message {
+    padding: 13px 15px;
+
+    margin: 18px 0;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.form-message.error {
+    background: var(--cream-light);
+
+    color: var(--navy);
+
+    border-left: 4px solid var(--navy);
+}
+
+
+.form-message.success {
+    background: var(--cream-light);
+
+    color: var(--navy);
+
+    border-left: 4px solid var(--navy);
+}
+
+/* =========================================================
+   RESULTS PAGE
+   Forces Academy LMS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   RESULTS MAIN CARD
+   --------------------------------------------------------- */
+
+.results-card {
+    width: 100%;
+    background: #F8F9F8;
+
+    border: 1px solid #D8D8C8;
+    border-top: 5px solid #0A2947;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(10, 41, 71, 0.10);
+
+    overflow: hidden;
+
+    margin-top: 25px;
+}
+
+
+/* ---------------------------------------------------------
+   RESULTS HEADING
+   --------------------------------------------------------- */
+
+.results-heading {
+    padding: 24px 28px;
+
+    background: #0A2947;
+
+    border-bottom: 1px solid #0A2947;
+}
+
+
+.results-heading h2 {
+    margin: 0 0 8px;
+
+    color: #EAE6BC;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.results-heading p {
+    margin: 0;
+
+    color: #EAE6BC;
+
+    opacity: 0.85;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   TABLE CONTAINER
+   --------------------------------------------------------- */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* ---------------------------------------------------------
+   RESULTS TABLE
+   --------------------------------------------------------- */
+
+.results-table {
+    width: 100%;
+
+    min-width: 950px;
+
+    border-collapse: collapse;
+
+    background: #F8F9F8;
+}
+
+
+/* ---------------------------------------------------------
+   TABLE HEADER
+   --------------------------------------------------------- */
+
+.results-table thead th {
+    padding: 17px 14px;
+
+    background: #EAE6BC;
+
+    color: #0A2947;
+
+    border-bottom: 2px solid #0A2947;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* First column */
+
+.results-table thead th:first-child {
+    text-align: left;
+
+    padding-left: 22px;
+}
+
+
+/* Maximum marks */
+
+.results-table thead th span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #0A2947;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    opacity: 0.70;
+}
+
+
+/* ---------------------------------------------------------
+   TABLE BODY
+   --------------------------------------------------------- */
+
+.results-table tbody td {
+    padding: 18px 14px;
+
+    color: #0A2947;
+
+    background: #F8F9F8;
+
+    border-bottom: 1px solid #DDDDCF;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+}
+
+
+/* First column */
+
+.results-table tbody td:first-child {
+    padding-left: 22px;
+
+    text-align: left;
+}
+
+
+/* ---------------------------------------------------------
+   TABLE ROW
+   --------------------------------------------------------- */
+
+.results-table tbody tr {
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Hover */
+
+.results-table tbody tr:hover td {
+    background: #F0EED5;
+}
+
+
+/* Last row */
+
+.results-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ---------------------------------------------------------
+   SUBJECT
+   --------------------------------------------------------- */
+
+.result-subject {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    min-width: 190px;
+}
+
+
+.result-subject strong {
+    color: #0A2947;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+.result-subject small {
+    color: #59636C;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* ---------------------------------------------------------
+   MARKS
+   --------------------------------------------------------- */
+
+.results-table tbody td:not(:first-child) {
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   TOTAL MARKS
+   --------------------------------------------------------- */
+
+.total-marks {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 52px;
+
+    padding: 8px 11px;
+
+    background: #0A2947;
+
+    color: #EAE6BC;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* ---------------------------------------------------------
+   GRADE
+   --------------------------------------------------------- */
+
+.grade-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 52px;
+
+    padding: 8px 12px;
+
+    background: #EAE6BC;
+
+    color: #0A2947;
+
+    border: 1px solid #0A2947;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* ---------------------------------------------------------
+   EMPTY RESULTS
+   --------------------------------------------------------- */
+
+.empty-state {
+    max-width: 650px;
+
+    margin: 40px auto;
+
+    padding: 40px 30px;
+
+    background: #F8F9F8;
+
+    border: 1px solid #D8D8C8;
+
+    border-top: 5px solid #0A2947;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(10, 41, 71, 0.08);
+
+    text-align: center;
+}
+
+
+.empty-state h3 {
+    margin: 0 0 10px;
+
+    color: #0A2947;
+
+    font-size: 22px;
+}
+
+
+.empty-state p {
+    margin: 0;
+
+    color: #59636C;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   RESULTS PAGE HEADER
+   --------------------------------------------------------- */
+
+.page-header {
+    margin-bottom: 10px;
+}
+
+
+.page-header h1 {
+    margin-bottom: 7px;
+
+    color: #0A2947;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+
+.page-header p {
+    margin: 0;
+
+    color: #59636C;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   TABLE SCROLLBAR
+   --------------------------------------------------------- */
+
+.table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+
+.table-container::-webkit-scrollbar-track {
+    background: #EAE6BC;
+}
+
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #0A2947;
+
+    border-radius: 10px;
+}
+
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #123F68;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .results-card {
+        margin-top: 20px;
+    }
+
+
+    .results-heading {
+        padding: 21px 22px;
+    }
+
+
+    .results-heading h2 {
+        font-size: 21px;
+    }
+
+
+    .results-heading p {
+        font-size: 13px;
+    }
+
+
+    .results-table {
+        min-width: 900px;
+    }
+
+
+    .results-table thead th {
+        padding: 15px 12px;
+
+        font-size: 13px;
+    }
+
+
+    .results-table tbody td {
+        padding: 16px 12px;
+
+        font-size: 14px;
+    }
+
+
+    .result-subject strong {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .results-card {
+        margin-top: 18px;
+
+        border-radius: 10px;
+    }
+
+
+    .results-heading {
+        padding: 19px;
+    }
+
+
+    .results-heading h2 {
+        font-size: 20px;
+    }
+
+
+    .results-heading p {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+
+    /*
+       Keep table wide enough to remain readable.
+       User can scroll horizontally.
+    */
+
+    .results-table {
+        min-width: 900px;
+    }
+
+
+    .results-table thead th {
+        padding: 14px 10px;
+
+        font-size: 12px;
+    }
+
+
+    .results-table thead th span {
+        font-size: 10px;
+    }
+
+
+    .results-table tbody td {
+        padding: 15px 10px;
+
+        font-size: 14px;
+    }
+
+
+    .results-table tbody td:first-child {
+        padding-left: 15px;
+    }
+
+
+    .result-subject {
+        min-width: 175px;
+    }
+
+
+    .result-subject strong {
+        font-size: 14px;
+    }
+
+
+    .result-subject small {
+        font-size: 11px;
+    }
+
+
+    .total-marks {
+        min-width: 48px;
+
+        padding: 7px 9px;
+
+        font-size: 13px;
+    }
+
+
+    .grade-badge {
+        min-width: 48px;
+
+        padding: 7px 9px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   VERY SMALL MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 400px) {
+
+    .results-heading h2 {
+        font-size: 18px;
+    }
+
+
+    .results-heading p {
+        font-size: 11px;
+    }
+
+
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+
+    .page-header p {
+        font-size: 13px;
+    }
+
+}
