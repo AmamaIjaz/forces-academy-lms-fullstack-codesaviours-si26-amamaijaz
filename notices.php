@@ -187,7 +187,17 @@ $notices_result = mysqli_query($conn, $notices_query);
         </a>
 
         <div class="sidebar-divider"></div>
+          <a href="timetable.php">
+        Timetable
+</a>
+    <a href="profile.php">
 
+    My Profile
+</a>
+</a>
+ <a href="fees.php" >
+                My Fees
+            </a>
         <a
             href="logout.php"
             class="sidebar-link logout-link"

@@ -99,7 +99,16 @@ if ($stmt) {
             <a href="notices.php">
                 Notices
             </a>
-
+          <a href="timetable.php">
+        Timetable
+</a>
+    <a href="profile.php">
+ My Profile
+</a>
+</a>
+ <a href="fees.php" >
+                My Fees
+            </a>
             <a href="logout.php" class="logout">
                 Logout
             </a>

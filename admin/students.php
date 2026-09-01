@@ -453,7 +453,27 @@ if ($search !== '') {
 
             </a>
 
+            <a href="timetable.php">
 
+    <span>📅</span>
+
+    <span>
+        Timetable
+    </span>
+
+</a>
+ <a
+                href="fees.php"
+              
+            >
+
+                <span>📅</span>
+
+                <span>
+                    Fees
+                </span>
+
+            </a>
             <a
                 href="logout.php"
                 class="logout-link"
@@ -769,7 +789,7 @@ if ($search !== '') {
 
 
                                         <a
-                                            href="student_details.php?id=<?= $student['id'] ?>"
+                                            href="student_view.php?id=<?= $student['id'] ?>"
                                             class="view-student-btn"
                                         >
 

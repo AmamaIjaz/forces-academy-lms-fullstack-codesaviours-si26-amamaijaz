@@ -148,52 +148,56 @@ $courses_result = mysqli_query($conn, $courses_query);
 
         <a
             href="dashboard.php"
-            class="sidebar-link"
-        >
-            <i class="bi bi-grid-1x2-fill"></i>
-            <span>Dashboard</span>
+            class="sidebar-link" >
+            Dashboard
         </a>
 
         <a
             href="courses.php"
-            class="sidebar-link active"
-        >
-            <i class="bi bi-book-fill"></i>
-            <span>My Courses</span>
+            class="sidebar-link active">
+        
+            My Courses
         </a>
 
         <a
             href="assignments.php"
             class="sidebar-link"
         >
-            <i class="bi bi-file-earmark-text-fill"></i>
-            <span>Assignments</span>
+           Assignments
         </a>
 
         <a
             href="results.php"
             class="sidebar-link"
         >
-            <i class="bi bi-bar-chart-fill"></i>
-            <span>My Results</span>
+            My Results
         </a>
 
         <a
             href="notices.php"
             class="sidebar-link"
         >
-            <i class="bi bi-megaphone-fill"></i>
-            <span>Notices</span>
+            Notices
         </a>
 
         <div class="sidebar-divider"></div>
-
+          <a href="timetable.php">
+        Timetable
+</a>
+    <a href="profile.php">
+    
+    My Profile
+</a>
+</a>
+ <a href="fees.php" >
+                My Fees
+            </a>
         <a
             href="logout.php"
             class="sidebar-link logout-link"
         >
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Logout</span>
+         
+            Logout
         </a>
 
     </nav>

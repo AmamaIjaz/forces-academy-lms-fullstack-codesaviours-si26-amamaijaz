@@ -3930,3 +3930,1225 @@ body {
 
 }
 
+/* =========================================================
+   MANAGE ASSIGNMENTS
+   ========================================================= */
+
+
+/* Assignment Form */
+
+.assignment-form {
+    margin-top: 20px;
+    max-width: 800px;
+}
+
+
+.assignment-form-group {
+    margin-bottom: 18px;
+}
+
+
+.assignment-form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #0A2947;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.assignment-form-group input,
+.assignment-form-group textarea,
+.assignment-form-group select {
+    width: 100%;
+
+    padding: 10px 13px;
+
+    border: 1px solid #d6d8cc;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #0A2947;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.assignment-form-group input,
+.assignment-form-group select {
+    height: 43px;
+}
+
+
+.assignment-form-group textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+
+.assignment-form-group input:focus,
+.assignment-form-group textarea:focus,
+.assignment-form-group select:focus {
+    border-color: #0A2947;
+
+    box-shadow:
+        0 0 0 3px rgba(10, 41, 71, 0.08);
+}
+
+
+/* Form Buttons */
+
+.assignment-form-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 5px;
+}
+
+
+.assignment-submit-btn,
+.assignment-cancel-btn {
+    height: 42px;
+
+    padding: 0 20px;
+
+    border-radius: 6px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+.assignment-submit-btn {
+    border: none;
+
+    background: #0A2947;
+
+    color: #EAE6BC;
+}
+
+
+.assignment-submit-btn:hover {
+    background: #16466D;
+
+    color: #EAE6BC;
+}
+
+
+.assignment-cancel-btn {
+    background: #8B5E3C;
+
+    color: #ffffff;
+}
+
+
+.assignment-cancel-btn:hover {
+    background: #70472F;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ASSIGNMENT TABLE
+   ========================================================= */
+
+.assignment-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.assignment-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 5px;
+}
+
+
+.assignment-table th {
+    padding: 14px 12px;
+
+    background: #0A2947;
+
+    color: #EAE6BC;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.assignment-table td {
+    padding: 13px 12px;
+
+    border-bottom: 1px solid #e0e1d8;
+
+    color: #0A2947;
+
+    font-size: 13px;
+
+    vertical-align: middle;
+}
+
+
+.assignment-table tbody tr:hover {
+    background: #f5f5e8;
+}
+
+
+/* Description */
+
+.assignment-description {
+    max-width: 300px;
+
+    line-height: 1.5;
+
+    color: #647481;
+}
+
+
+/* Course Badge */
+
+.course-badge {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    background: #EAE6BC;
+
+    color: #0A2947;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.assignment-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.edit-assignment-btn,
+.delete-assignment-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.edit-assignment-btn {
+    background: #0A2947;
+
+    color: #EAE6BC;
+}
+
+
+.edit-assignment-btn:hover {
+    background: #16466D;
+
+    color: #EAE6BC;
+}
+
+
+.delete-assignment-btn {
+    background: #8B5E3C;
+
+    color: #ffffff;
+}
+
+
+.delete-assignment-btn:hover {
+    background: #70472F;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SUCCESS / ERROR
+   ========================================================= */
+
+.assignment-success {
+    padding: 12px 15px;
+
+    margin-bottom: 20px;
+
+    background: #f1eecf;
+
+    color: #0A2947;
+
+    border-left: 4px solid #0A2947;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+
+.assignment-error {
+    padding: 12px 15px;
+
+    margin-bottom: 20px;
+
+    background: #f1eecf;
+
+    color: #0A2947;
+
+    border-left: 4px solid #8B5E3C;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+
+/* Empty State */
+
+.no-assignments {
+    padding: 40px 20px !important;
+
+    text-align: center;
+
+    color: #647481 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .assignment-form {
+        max-width: 100%;
+    }
+
+
+    .assignment-form-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .assignment-submit-btn,
+    .assignment-cancel-btn {
+        width: 100%;
+    }
+
+
+    .assignment-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .edit-assignment-btn,
+    .delete-assignment-btn {
+        width: 100%;
+    }
+
+}
+/* =========================================================
+   STUDENT VIEW PAGE
+   ========================================================= */
+
+
+/* Back Button */
+
+.student-view-back {
+    margin-bottom: 18px;
+}
+
+
+.student-view-back a {
+    display: inline-block;
+
+    color: #0A2947;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.student-view-back a:hover {
+    color: #8B5E3C;
+}
+
+
+/* =========================================================
+   STUDENT PROFILE
+   ========================================================= */
+
+.student-profile-card {
+    margin-bottom: 20px;
+}
+
+
+.student-profile-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #e0e1d8;
+}
+
+
+.student-avatar {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #0A2947;
+
+    color: #EAE6BC;
+
+    font-size: 23px;
+
+    font-weight: 700;
+}
+
+
+.student-profile-header h2 {
+    margin: 0 0 3px;
+
+    color: #0A2947;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+.student-profile-header p {
+    margin: 0;
+
+    color: #647481;
+
+    font-size: 13px;
+}
+
+
+/* Details Grid */
+
+.student-details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+.student-detail-item {
+    padding: 14px;
+
+    border: 1px solid #e0e1d8;
+
+    border-radius: 6px;
+
+    background: #fafaf4;
+}
+
+
+.student-detail-item span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #647481;
+
+    font-size: 12px;
+}
+
+
+.student-detail-item strong {
+    display: block;
+
+    color: #0A2947;
+
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   STUDENT TABLES
+   ========================================================= */
+
+.student-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.student-view-table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+.student-view-table th {
+    padding: 13px 11px;
+
+    background: #0A2947;
+
+    color: #EAE6BC;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.student-view-table td {
+    padding: 12px 11px;
+
+    border-bottom: 1px solid #e0e1d8;
+
+    color: #0A2947;
+
+    font-size: 13px;
+
+    vertical-align: middle;
+}
+
+
+.student-view-table tbody tr:hover {
+    background: #f5f5e8;
+}
+
+
+/* =========================================================
+   STATUS / GRADE
+   ========================================================= */
+
+.student-status-badge {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    background: #EAE6BC;
+
+    color: #0A2947;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.student-grade-badge {
+    display: inline-block;
+
+    min-width: 32px;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    background: #0A2947;
+
+    color: #EAE6BC;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* Empty Table */
+
+.student-empty {
+    padding: 35px 20px !important;
+
+    text-align: center;
+
+    color: #647481 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .student-details-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .student-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .student-profile-header {
+        align-items: flex-start;
+    }
+
+}
+/* =========================================================
+   ADD RESULT PAGE
+   ========================================================= */
+
+.add-result-back {
+    margin-bottom: 18px;
+}
+
+.add-result-back a {
+    color: #0A2947;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.add-result-back a:hover {
+    color: #8B5E3C;
+}
+
+
+/* Error */
+
+.result-error {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+
+    background: #f1eecf;
+    color: #0A2947;
+
+    border-left: 4px solid #8B5E3C;
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+
+/* Form */
+
+.add-result-card {
+    max-width: 900px;
+}
+
+.add-result-form {
+    margin-top: 20px;
+}
+
+
+.form-field {
+    margin-bottom: 18px;
+}
+
+.form-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #0A2947;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-field label span {
+    color: #647481;
+    font-weight: 500;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+
+    height: 43px;
+
+    padding: 9px 12px;
+
+    border: 1px solid #d6d8cc;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #0A2947;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    border-color: #0A2947;
+
+    box-shadow:
+        0 0 0 3px rgba(10, 41, 71, 0.08);
+}
+
+
+/* Marks Heading */
+
+.marks-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #e0e1d8;
+
+    color: #0A2947;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* Marks Grid */
+
+.marks-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    column-gap: 18px;
+}
+
+
+/* Total */
+
+.result-total-box {
+    margin-top: 5px;
+
+    padding: 15px 18px;
+
+    border-radius: 6px;
+
+    background: #EAE6BC;
+
+    border-left: 4px solid #0A2947;
+}
+
+.result-total-box > div {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.result-total-box span {
+    color: #0A2947;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.result-total-box strong {
+    color: #0A2947;
+
+    font-size: 20px;
+}
+
+
+/* Buttons */
+
+.add-result-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.add-result-submit,
+.add-result-cancel {
+    height: 42px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.add-result-submit {
+    border: none;
+
+    background: #0A2947;
+
+    color: #EAE6BC;
+}
+
+.add-result-submit:hover {
+    background: #16466D;
+
+    color: #EAE6BC;
+}
+
+.add-result-cancel {
+    background: #8B5E3C;
+
+    color: #ffffff;
+}
+
+.add-result-cancel:hover {
+    background: #70472F;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .add-result-card {
+        max-width: 100%;
+    }
+
+    .marks-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .add-result-actions {
+        flex-direction: column;
+    }
+
+    .add-result-submit,
+    .add-result-cancel {
+        width: 100%;
+    }
+
+}
+.result-success {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+
+    background: #EAE6BC;
+    color: #0A2947;
+
+    border-left: 4px solid #0A2947;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+/* =========================================================
+   TIMETABLE FORM
+   ========================================================= */
+
+.timetable-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 850px;
+}
+
+.timetable-form .form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.timetable-form label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0A2947;
+}
+
+.timetable-form input,
+.timetable-form select {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #d7d9d5;
+    border-radius: 6px;
+    background: #ffffff;
+    font-size: 14px;
+    outline: none;
+}
+
+.timetable-form input:focus,
+.timetable-form select:focus {
+    border-color: #0A2947;
+    box-shadow: 0 0 0 2px rgba(10, 41, 71, 0.08);
+}
+
+.timetable-submit-area {
+    grid-column: 1 / -1;
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   TIMETABLE TABLE
+   ========================================================= */
+
+.timetable-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.timetable-table th,
+.timetable-table td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+}
+
+.timetable-table th {
+    background: #0A2947;
+    color: #EAE6BC;
+    font-size: 13px;
+}
+
+.timetable-table td {
+    color: #333;
+    font-size: 14px;
+}
+
+.timetable-table tr:hover td {
+    background: #f8f9f8;
+}
+
+
+/* =========================================================
+   RESPONSIVE TIMETABLE FORM
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .timetable-form {
+        grid-template-columns: 1fr;
+    }
+
+    .timetable-submit-area {
+        grid-column: auto;
+    }
+
+}
+/* =========================================
+   FEE MANAGEMENT
+========================================= */
+
+.fee-alert {
+    margin-bottom: 25px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   ADD FEE FORM
+========================================= */
+
+.fee-form-card {
+    margin-bottom: 30px;
+}
+
+.fee-form-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0A2947;
+}
+
+.fee-form-card .form-control {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 10px 13px;
+    font-size: 15px;
+    background: #ffffff;
+}
+
+.fee-form-card .form-control:focus {
+    border-color: #0A2947;
+    box-shadow: 0 0 0 3px rgba(10, 41, 71, 0.08);
+    outline: none;
+}
+
+.form-button {
+    margin-top: 22px;
+}
+
+.btn-add-fee {
+    border: none;
+    background: #0A2947;
+    color: #EAE6BC;
+    padding: 11px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-add-fee:hover {
+    background: #123b61;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   FEE TABLE
+========================================= */
+
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1050px;
+}
+
+.fee-table thead th {
+    background: #0A2947;
+    color: #EAE6BC;
+    padding: 15px 12px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.fee-table tbody td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e6e6e6;
+    color: #333333;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.fee-table tbody tr:hover {
+    background: #faf9ef;
+}
+
+.fee-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.fee-amount {
+    color: #0A2947 !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   STATUS BADGES
+========================================= */
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-paid {
+    background: #dff3e5;
+    color: #217a3c;
+}
+
+.status-pending {
+    background: #fff1c7;
+    color: #856404;
+}
+
+.status-overdue {
+    background: #f8d7da;
+    color: #842029;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.fee-actions {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fee-actions form {
+    margin: 0;
+}
+
+.action-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+.paid-btn {
+    background: #dff3e5;
+    color: #217a3c;
+}
+
+.paid-btn:hover {
+    background: #c8e8d1;
+}
+
+.pending-btn {
+    background: #fff1c7;
+    color: #856404;
+}
+
+.pending-btn:hover {
+    background: #ffe6a0;
+}
+
+.delete-btn {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.delete-btn:hover {
+    background: #f1bfc3;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-fees {
+    text-align: center !important;
+    padding: 40px !important;
+    color: #777 !important;
+    font-size: 15px !important;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .fee-form-card .form-control {
+        font-size: 14px;
+    }
+
+    .btn-add-fee {
+        width: 100%;
+    }
+
+    .fee-table {
+        min-width: 950px;
+    }
+
+}

@@ -200,8 +200,7 @@ $recent_notices_result = mysqli_query($conn, $recent_notices_query);
             href="dashboard.php"
             class="sidebar-link active"
         >
-            <i class="bi bi-grid-1x2-fill"></i>
-            <span>Dashboard</span>
+            Dashboard
         </a>
 
 
@@ -209,8 +208,8 @@ $recent_notices_result = mysqli_query($conn, $recent_notices_query);
             href="courses.php"
             class="sidebar-link"
         >
-            <i class="bi bi-book-fill"></i>
-            <span>My Courses</span>
+           
+            My Courses
         </a>
 
 
@@ -218,8 +217,8 @@ $recent_notices_result = mysqli_query($conn, $recent_notices_query);
             href="assignments.php"
             class="sidebar-link"
         >
-            <i class="bi bi-file-earmark-text-fill"></i>
-            <span>Assignments</span>
+        
+            Assignments
         </a>
 
 
@@ -227,8 +226,8 @@ $recent_notices_result = mysqli_query($conn, $recent_notices_query);
             href="results.php"
             class="sidebar-link"
         >
-            <i class="bi bi-bar-chart-fill"></i>
-            <span>My Results</span>
+            
+            My Results
         </a>
 
 
@@ -236,13 +235,22 @@ $recent_notices_result = mysqli_query($conn, $recent_notices_query);
             href="notices.php"
             class="sidebar-link"
         >
-            <i class="bi bi-megaphone-fill"></i>
-            <span>Notices</span>
+           
+            Notices
         </a>
 
 
         <div class="sidebar-divider"></div>
 
+          <a href="timetable.php">
+        Timetable
+</a>
+    <a href="profile.php">
+     Profile
+</a>
+ <a href="fees.php" >
+                My Fees
+            </a>
 
         <a
             href="logout.php"

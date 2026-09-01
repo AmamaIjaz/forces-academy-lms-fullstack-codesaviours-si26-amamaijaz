@@ -364,7 +364,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="notices.php">
                 Notices
             </a>
-
+          <a href="timetable.php">
+        Timetable
+</a>
+<a href="profile.php">
+    
+    <span>My Profile</span>
+</a>
+</a>
+ <a href="fees.php" >
+                My Fees
+            </a>
             <a href="logout.php" class="logout">
                 Logout
             </a>

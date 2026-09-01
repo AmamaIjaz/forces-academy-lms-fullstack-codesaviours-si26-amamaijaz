@@ -2521,3 +2521,2559 @@ select:focus-visible {
     }
 
 }
+/* =========================================================
+   STUDENT TIMETABLE
+   ========================================================= */
+
+.student-timetable-card {
+    margin-top: 10px;
+}
+
+
+/* Class Badge */
+
+.class-badge {
+    display: inline-block;
+    background: #EAE6BC;
+    color: #0A2947;
+    padding: 7px 13px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TIMETABLE WRAPPER
+   ========================================================= */
+
+.student-timetable-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   TIMETABLE TABLE
+   ========================================================= */
+
+.student-timetable {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+/* Header */
+
+.student-timetable thead th {
+    background: #0A2947;
+    color: #EAE6BC;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-right: 1px solid rgba(234, 230, 188, 0.2);
+}
+
+
+.student-timetable thead th:last-child {
+    border-right: none;
+}
+
+
+/* Time Header */
+
+.student-timetable .time-header {
+    width: 135px;
+}
+
+
+/* Table Cells */
+
+.student-timetable tbody td {
+    border: 1px solid #e4e4e4;
+    min-height: 90px;
+    height: 90px;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* Time Slot */
+
+.student-timetable .time-slot-cell {
+    background: #f5f4e9;
+    color: #0A2947;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+/* Class Cell */
+
+.timetable-class-cell {
+    background: #ffffff;
+}
+
+
+/* Hover */
+
+.student-timetable tbody tr:hover td {
+    background: #f8f9f8;
+}
+
+
+.student-timetable tbody tr:hover .time-slot-cell {
+    background: #EAE6BC;
+}
+
+
+/* =========================================================
+   CLASS ENTRY
+   ========================================================= */
+
+.class-entry {
+    background: #f3f5f3;
+    border-left: 4px solid #0A2947;
+    border-radius: 5px;
+    padding: 10px 7px;
+    min-height: 65px;
+}
+
+
+.class-subject {
+    color: #0A2947;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+
+.class-teacher {
+    color: #666666;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+
+/* Empty Cell */
+
+.no-class {
+    color: #b5b5b5;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   EMPTY TIMETABLE
+   ========================================================= */
+
+.student-timetable-empty {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+
+.empty-timetable-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+
+.student-timetable-empty h3 {
+    color: #0A2947;
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+
+.student-timetable-empty p {
+    color: #777777;
+    margin: 0;
+}
+
+
+/* =========================================================
+   TIMETABLE INFORMATION
+   ========================================================= */
+
+.timetable-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+.timetable-note .info-icon {
+    flex-shrink: 0;
+}
+
+
+.timetable-note h3 {
+    color: #0A2947;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+
+.timetable-note p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .student-timetable-card {
+        padding: 18px;
+    }
+
+    .student-timetable {
+        min-width: 850px;
+    }
+
+    .student-timetable thead th {
+        font-size: 12px;
+        padding: 12px 8px;
+    }
+
+    .student-timetable tbody td {
+        height: 80px;
+        padding: 6px;
+    }
+
+    .class-subject {
+        font-size: 12px;
+    }
+
+    .class-teacher {
+        font-size: 10px;
+    }
+
+}/* =========================================================
+   WEEK 6 - STUDENT TIMETABLE
+   Same style as Student/Admin Panel
+   ========================================================= */
+
+.student-timetable-card {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   TIMETABLE HEADER
+   ========================================================= */
+
+.student-timetable-card .section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.student-timetable-card .section-heading h3 {
+    margin: 0 0 5px;
+    color: var(--navy);
+    font-size: 20px;
+}
+
+.student-timetable-card .section-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CLASS BADGE
+   ========================================================= */
+
+.class-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 14px;
+
+    background: var(--navy);
+    color: var(--cream);
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TIMETABLE WRAPPER
+   ========================================================= */
+
+.student-timetable-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+}
+/* =========================================================
+   STUDENT TIMETABLE PAGE
+   FORCES ACADEMY LMS
+========================================================= */
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.student-content .top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-bottom: 28px;
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.student-content .top-header h1 {
+    margin: 0 0 7px;
+
+    color: var(--navy);
+
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.student-content .top-header p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.student-content .top-header p strong {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   STUDENT BADGE
+========================================================= */
+
+.student-badge {
+    display: inline-flex;
+    align-items: center;
+
+    max-width: 350px;
+
+    padding: 10px 16px;
+
+    background: var(--cream-light);
+
+    color: var(--navy);
+
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--navy);
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    box-shadow: var(--shadow);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   MAIN TIMETABLE CARD
+========================================================= */
+
+.student-timetable-card {
+    width: 100%;
+
+    margin-bottom: 22px;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: var(--light);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   TIMETABLE CARD HEADER
+========================================================= */
+
+.student-timetable-card .section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 24px 26px;
+
+    margin: 0;
+
+    background: var(--cream-light);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.student-timetable-card .section-heading h3 {
+    margin: 0 0 6px;
+
+    color: var(--navy);
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.student-timetable-card .section-heading p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CLASS BADGE
+========================================================= */
+
+.class-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 90px;
+
+    padding: 9px 18px;
+
+    background: var(--navy);
+
+    color: var(--cream);
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+
+    box-shadow: 0 4px 10px rgba(10, 41, 71, 0.15);
+}
+
+
+/* =========================================================
+   TIMETABLE WRAPPER
+========================================================= */
+
+.student-timetable-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding: 25px;
+
+    background: var(--light);
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   TIMETABLE TABLE
+========================================================= */
+
+.student-timetable {
+    width: 100%;
+    min-width: 950px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    table-layout: fixed;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.student-timetable thead th {
+    padding: 17px 10px;
+
+    background: var(--navy);
+
+    color: var(--cream);
+
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+
+    white-space: nowrap;
+}
+
+.student-timetable thead th:first-child {
+    border-top-left-radius: 9px;
+}
+
+.student-timetable thead th:last-child {
+    border-top-right-radius: 9px;
+    border-right: none;
+}
+
+
+/* =========================================================
+   TIME HEADER
+========================================================= */
+
+.student-timetable .time-header {
+    width: 150px;
+
+    background: var(--navy-dark);
+
+    color: var(--cream);
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.student-timetable tbody td {
+    height: 105px;
+
+    padding: 10px;
+
+    background: var(--white);
+
+    color: var(--navy);
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    text-align: center;
+    vertical-align: middle;
+
+    transition:
+        background 0.2s ease;
+}
+
+.student-timetable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.student-timetable tbody td:last-child {
+    border-right: none;
+}
+
+
+/* =========================================================
+   ALTERNATE ROW COLOR
+========================================================= */
+
+.student-timetable tbody tr:nth-child(even) td {
+    background: #fafaf6;
+}
+
+
+/* =========================================================
+   TIME SLOT CELL
+========================================================= */
+
+.student-timetable .time-slot-cell {
+    width: 150px;
+
+    padding: 10px;
+
+    background: var(--cream-light) !important;
+
+    color: var(--navy);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    border-right: 2px solid var(--border);
+}
+
+
+/* =========================================================
+   CLASS CELL
+========================================================= */
+
+.student-timetable .timetable-class-cell {
+    position: relative;
+
+    background: var(--white);
+}
+
+
+/* =========================================================
+   CLASS ENTRY
+========================================================= */
+
+.class-entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 72px;
+
+    padding: 12px;
+
+    background: var(--cream-light);
+
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--navy);
+
+    border-radius: 8px;
+
+    text-align: left;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.class-entry:hover {
+    background: var(--cream);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 16px rgba(10, 41, 71, 0.14);
+}
+
+
+/* =========================================================
+   SUBJECT NAME
+========================================================= */
+
+.class-subject {
+    margin-bottom: 8px;
+
+    color: var(--navy);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   TEACHER NAME
+========================================================= */
+
+.class-teacher {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   EMPTY CLASS
+========================================================= */
+
+.no-class {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    color: #a5a5a5;
+
+    background: #f3f3ef;
+
+    border: 1px solid #e5e5df;
+    border-radius: 50%;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.timetable-class-cell:hover .no-class {
+    background: var(--cream-light);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   ROW HOVER
+========================================================= */
+
+.student-timetable tbody tr:hover td {
+    background: #f8f8f2;
+}
+
+.student-timetable tbody tr:hover .time-slot-cell {
+    background: var(--cream) !important;
+}
+
+.student-timetable tbody tr:hover .timetable-class-cell {
+    background: #fafaf5;
+}
+
+
+/* =========================================================
+   EMPTY TIMETABLE
+========================================================= */
+
+.student-timetable-empty {
+    padding: 80px 25px;
+
+    text-align: center;
+
+    background: var(--light);
+}
+
+.empty-timetable-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--navy);
+
+    color: var(--cream);
+
+    border-radius: 15px;
+
+    font-size: 32px;
+
+    box-shadow: 0 8px 20px rgba(10, 41, 71, 0.15);
+}
+
+.student-timetable-empty h3 {
+    margin: 0 0 8px;
+
+    color: var(--navy);
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.student-timetable-empty p {
+    max-width: 450px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TIMETABLE INFORMATION CARD
+========================================================= */
+
+.timetable-note {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding: 22px;
+
+    margin-top: 0;
+
+    background: var(--cream-light);
+
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--navy);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+}
+
+.timetable-note .info-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: var(--navy);
+
+    color: var(--cream);
+
+    border-radius: 9px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    box-shadow: 0 4px 10px rgba(10, 41, 71, 0.12);
+}
+
+.timetable-note h3 {
+    margin: 1px 0 6px;
+
+    color: var(--navy);
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.timetable-note p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .student-content .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .student-badge {
+        max-width: 100%;
+    }
+
+    .student-timetable-card .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 20px;
+    }
+
+    .class-badge {
+        align-self: flex-start;
+    }
+
+    .student-timetable-wrapper {
+        padding: 18px;
+    }
+
+    .student-timetable {
+        min-width: 900px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .student-content .top-header {
+        margin-bottom: 20px;
+        padding-bottom: 18px;
+    }
+
+    .student-content .top-header h1 {
+        font-size: 26px;
+    }
+
+    .student-content .top-header p {
+        font-size: 13px;
+    }
+
+    .student-badge {
+        width: 100%;
+
+        padding: 9px 13px;
+
+        font-size: 12px;
+    }
+
+    .student-timetable-card {
+        border-radius: 10px;
+    }
+
+    .student-timetable-card .section-heading {
+        padding: 18px;
+    }
+
+    .student-timetable-card .section-heading h3 {
+        font-size: 18px;
+    }
+
+    .student-timetable-card .section-heading p {
+        font-size: 12px;
+    }
+
+    .class-badge {
+        padding: 7px 13px;
+
+        font-size: 11px;
+    }
+
+    .student-timetable-wrapper {
+        padding: 12px;
+    }
+
+    .student-timetable {
+        min-width: 850px;
+    }
+
+    .student-timetable thead th {
+        padding: 13px 8px;
+
+        font-size: 11px;
+    }
+
+    .student-timetable tbody td {
+        height: 85px;
+
+        padding: 7px;
+    }
+
+    .student-timetable .time-slot-cell {
+        width: 125px;
+
+        font-size: 11px;
+    }
+
+    .class-entry {
+        min-height: 62px;
+
+        padding: 8px;
+    }
+
+    .class-subject {
+        margin-bottom: 5px;
+
+        font-size: 11px;
+    }
+
+    .class-teacher {
+        font-size: 9px;
+    }
+
+    .timetable-note {
+        padding: 17px;
+
+        gap: 12px;
+
+        border-radius: 10px;
+    }
+
+    .timetable-note .info-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 15px;
+    }
+
+    .timetable-note h3 {
+        font-size: 15px;
+    }
+
+    .timetable-note p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .student-content .top-header h1 {
+        font-size: 23px;
+    }
+
+    .student-timetable-wrapper {
+        padding: 8px;
+    }
+
+    .student-timetable {
+        min-width: 800px;
+    }
+
+    .student-timetable thead th {
+        padding: 10px 6px;
+
+        font-size: 10px;
+    }
+
+    .student-timetable tbody td {
+        height: 78px;
+
+        padding: 5px;
+    }
+
+    .class-entry {
+        padding: 7px;
+    }
+
+}/* =========================================================
+   STUDENT PANEL LAYOUT
+========================================================= */
+
+.student-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f6f8;
+}
+
+
+/* =========================================================
+   LEFT SIDEBAR
+========================================================= */
+
+.student-sidebar {
+    width: 260px;
+    min-height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #0e2444;
+
+    color: #ffffff;
+
+    padding: 25px 15px;
+
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   SIDEBAR BRAND
+========================================================= */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 10px 25px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #18365e;
+
+    border-radius: 10px;
+
+    font-size: 22px;
+}
+
+
+.sidebar-brand h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.sidebar-brand span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #b8c5d6;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.student-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    width: 100%;
+}
+
+
+.student-nav a {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    color: #b8c5d6;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+
+/* ICON */
+
+.student-nav a span:first-child {
+    width: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+
+/* HOVER */
+
+.student-nav a:hover {
+    background: #18365e;
+
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+/* ACTIVE PAGE */
+
+.student-nav a.active {
+    background: #ffffff;
+
+    color: #0e2444;
+
+    font-weight: 700;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.student-nav .logout-link {
+    margin-top: 15px;
+
+    color: #ffb4b4;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 0;
+
+    padding-top: 20px;
+}
+
+
+.student-nav .logout-link:hover {
+    background: #7a1f1f;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.student-content {
+    width: calc(100% - 260px);
+
+    min-height: 100vh;
+
+    margin-left: 260px;
+
+    padding: 35px;
+
+    background: #f5f6f8;
+}
+
+
+/* =========================================================
+   RESPONSIVE SIDEBAR
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .student-sidebar {
+        width: 220px;
+    }
+
+    .student-content {
+        width: calc(100% - 220px);
+
+        margin-left: 220px;
+
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .student-sidebar {
+        width: 70px;
+
+        padding: 20px 10px;
+    }
+
+    .sidebar-brand {
+        justify-content: center;
+
+        padding-bottom: 20px;
+    }
+
+    .sidebar-brand > div:last-child {
+        display: none;
+    }
+
+    .student-nav a {
+        justify-content: center;
+
+        padding: 13px 5px;
+    }
+
+    .student-nav a span:last-child {
+        display: none;
+    }
+
+    .student-nav a:hover {
+        transform: none;
+    }
+
+    .student-content {
+        width: calc(100% - 70px);
+
+        margin-left: 70px;
+
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .student-sidebar {
+        display: none;
+    }
+
+    .student-content {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 15px;
+    }
+
+}
+/* =========================================================
+   PROFILE PAGE
+   ========================================================= */
+
+.profile-content {
+    padding: 35px;
+    min-height: 100vh;
+    background: #EAE6BC;
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+   ========================================================= */
+
+.profile-header {
+    margin-bottom: 30px;
+}
+
+.profile-header h1 {
+    color: #0A2947;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.profile-header p {
+    color: #555;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   PROFILE CARDS
+   ========================================================= */
+
+.profile-card {
+    background: #F8F9F8;
+    border-radius: 14px;
+    padding: 28px;
+    height: 100%;
+    border: 1px solid rgba(10, 41, 71, 0.08);
+    box-shadow: 0 5px 18px rgba(10, 41, 71, 0.10);
+}
+
+.profile-card h3 {
+    color: #0A2947;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #EAE6BC;
+}
+
+
+/* =========================================================
+   PROFILE ICON
+   ========================================================= */
+
+.profile-icon {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0A2947;
+    color: #EAE6BC;
+
+    border-radius: 50%;
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 4px 12px rgba(10, 41, 71, 0.20);
+}
+
+
+/* =========================================================
+   PROFILE INFORMATION BOX
+   ========================================================= */
+
+.info-box {
+    background: #ffffff;
+
+    border-left: 4px solid #0A2947;
+
+    padding: 14px 17px;
+
+    margin-bottom: 14px;
+
+    border-radius: 7px;
+
+    transition: 0.2s ease;
+}
+
+.info-box:hover {
+    transform: translateX(3px);
+    box-shadow: 0 3px 10px rgba(10, 41, 71, 0.08);
+}
+
+.info-label {
+    display: block;
+
+    color: #777;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 4px;
+}
+
+.info-value {
+    display: block;
+
+    color: #0A2947;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.profile-card .form-label {
+    color: #0A2947;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.profile-card .form-control {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: #ffffff;
+
+    color: #0A2947;
+
+    border: 1px solid #cfcfcf;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    transition: 0.2s ease;
+}
+
+.profile-card .form-control:focus {
+    border-color: #0A2947;
+
+    outline: none;
+
+    box-shadow: 0 0 0 3px rgba(10, 41, 71, 0.12);
+}
+
+.profile-card .form-control::placeholder {
+    color: #999;
+}
+
+
+/* =========================================================
+   PASSWORD HELP TEXT
+   ========================================================= */
+
+.profile-card small.text-muted {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #777 !important;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   NAVY BUTTON
+   ========================================================= */
+
+.btn-navy {
+    background: #0A2947;
+
+    color: #EAE6BC;
+
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.btn-navy:hover {
+    background: #123D63;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 4px 10px rgba(10, 41, 71, 0.18);
+}
+
+.btn-navy:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.profile-card .alert,
+.profile-content > .alert {
+    border-radius: 8px;
+
+    padding: 13px 16px;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   STUDENT SIDEBAR
+   ========================================================= */
+
+.student-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 250px;
+
+    height: 100vh;
+
+    background: #0A2947;
+
+    color: #EAE6BC;
+
+    overflow-y: auto;
+
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   SIDEBAR BRAND
+   ========================================================= */
+
+.sidebar-brand {
+    padding: 25px 20px;
+
+    text-align: center;
+
+    border-bottom: 1px solid rgba(234, 230, 188, 0.18);
+}
+
+.sidebar-brand h4 {
+    color: #EAE6BC;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    margin: 0 0 5px;
+}
+
+.sidebar-brand small {
+    color: #EAE6BC;
+
+    opacity: 0.75;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.sidebar-nav {
+    padding: 15px 10px;
+}
+
+.sidebar-nav a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #EAE6BC;
+
+    text-decoration: none;
+
+    padding: 13px 15px;
+
+    margin-bottom: 5px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: 0.2s ease;
+}
+
+.sidebar-nav a span:first-child {
+    width: 22px;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+.sidebar-nav a:hover {
+    background: #EAE6BC;
+
+    color: #0A2947;
+}
+
+.sidebar-nav a.active {
+    background: #EAE6BC;
+
+    color: #0A2947;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MAIN CONTENT OFFSET
+   ========================================================= */
+
+main {
+    margin-left: 250px;
+}
+
+
+/* =========================================================
+   PROFILE GRID
+   ========================================================= */
+
+.profile-content .row {
+    align-items: stretch;
+}
+
+.profile-content .col-lg-5,
+.profile-content .col-lg-7 {
+    display: flex;
+}
+
+.profile-content .profile-card {
+    width: 100%;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .student-sidebar {
+        width: 220px;
+    }
+
+    main {
+        margin-left: 220px;
+    }
+
+    .profile-content {
+        padding: 25px;
+    }
+
+    .profile-header h1 {
+        font-size: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .student-sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: auto;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .profile-content {
+        padding: 20px 15px;
+    }
+
+    .profile-header h1 {
+        font-size: 25px;
+    }
+
+    .profile-header p {
+        font-size: 14px;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-card h3 {
+        font-size: 19px;
+    }
+
+    .info-value {
+        font-size: 16px;
+    }
+
+    .btn-navy {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE DEVICES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .profile-content {
+        padding: 15px 10px;
+    }
+
+    .profile-card {
+        padding: 17px;
+        border-radius: 10px;
+    }
+
+    .profile-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 29px;
+    }
+
+    .profile-card h3 {
+        font-size: 18px;
+    }
+
+    .info-box {
+        padding: 12px 14px;
+    }
+
+    .info-value {
+        font-size: 15px;
+    }
+
+}
+
+
+
+/* =========================================
+   STUDENT FEES PAGE
+========================================= */
+
+.pending-fee-card {
+    background: #0A2947;
+    color: #EAE6BC;
+    border-radius: 14px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 5px 18px rgba(10, 41, 71, 0.12);
+}
+
+.pending-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+.pending-fee-card h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.pending-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #EAE6BC;
+    color: #0A2947;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   CONTENT CARD
+========================================= */
+
+.student-content-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   FEE TABLE
+========================================= */
+
+.student-fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.student-fee-table thead th {
+    background: #0A2947;
+    color: #EAE6BC;
+
+    padding: 15px 14px;
+
+    text-align: left;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.student-fee-table tbody td {
+    padding: 15px 14px;
+
+    border-bottom: 1px solid #e8e8e8;
+
+    font-size: 14px;
+    color: #333;
+
+    vertical-align: middle;
+}
+
+.student-fee-table tbody tr:hover {
+    background: #faf9ef;
+}
+
+.student-fee-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   AMOUNT
+========================================= */
+
+.student-fee-amount {
+    color: #0A2947 !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.fee-status {
+    display: inline-block;
+
+    padding: 6px 13px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.fee-paid {
+    background: #dff3e5;
+    color: #217a3c;
+}
+
+.fee-pending {
+    background: #fff1c7;
+    color: #856404;
+}
+
+.fee-overdue {
+    background: #f8d7da;
+    color: #842029;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-fees {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.empty-fees-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #EAE6BC;
+    color: #0A2947;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+}
+
+.empty-fees h3 {
+    color: #0A2947;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.empty-fees p {
+    color: #777;
+    margin: 0;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .pending-fee-card {
+        padding: 20px;
+    }
+
+    .pending-fee-card h2 {
+        font-size: 25px;
+    }
+
+    .student-content-card {
+        padding: 18px;
+    }
+
+    .student-fee-table {
+        min-width: 700px;
+    }
+
+}
+/* =========================================
+   PRINT RESULTS
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eeeeee;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   MAIN PRINT PAGE
+========================================= */
+
+.print-page {
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.print-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+
+    border-bottom: 3px solid #0A2947;
+}
+
+.academy-name h1 {
+    margin: 0;
+
+    color: #0A2947;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.academy-name p {
+    margin: 6px 0 0;
+
+    color: #666666;
+
+    font-size: 15px;
+}
+
+.print-date {
+    color: #555555;
+
+    font-size: 14px;
+
+    padding-top: 5px;
+}
+
+
+/* =========================================
+   STUDENT INFORMATION
+========================================= */
+
+.student-information {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 28px;
+
+    background: #f8f9f8;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+}
+
+.student-info-item span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #777777;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.student-info-item strong {
+    display: block;
+
+    color: #0A2947;
+
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   RESULTS HEADING
+========================================= */
+
+.results-heading {
+    margin-bottom: 15px;
+}
+
+.results-heading h2 {
+    margin: 0;
+
+    color: #0A2947;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.results-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+.results-table th {
+    padding: 13px 8px;
+
+    background: #0A2947;
+
+    color: #EAE6BC;
+
+    border: 1px solid #0A2947;
+
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.results-table th span {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.results-table td {
+    padding: 13px 8px;
+
+    border: 1px solid #d8d8d8;
+
+    text-align: center;
+
+    color: #333333;
+
+    font-size: 14px;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background: #f8f9f8;
+}
+
+.results-table tbody tr:hover {
+    background: #f1f1e9;
+}
+
+
+/* =========================================
+   SUBJECT
+========================================= */
+
+.subject-cell {
+    text-align: left !important;
+
+    color: #0A2947 !important;
+
+    font-weight: 700;
+
+    width: 22%;
+}
+
+
+/* =========================================
+   TOTAL
+========================================= */
+
+.total-cell {
+    color: #0A2947 !important;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   GRADE
+========================================= */
+
+.grade-cell {
+    color: #0A2947 !important;
+
+    font-weight: 700;
+
+    font-size: 15px !important;
+}
+
+
+/* =========================================
+   RESULT SUMMARY
+========================================= */
+
+.result-summary {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.summary-box {
+    min-width: 150px;
+
+    padding: 15px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.summary-box span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+.summary-box strong {
+    color: #0A2947;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   NO RESULTS
+========================================= */
+
+.no-results {
+    padding: 45px;
+
+    border: 1px solid #dddddd;
+
+    text-align: center;
+
+    color: #777777;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.print-footer {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 35px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #dddddd;
+}
+
+.print-footer p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+.print-button {
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #0A2947;
+
+    color: #EAE6BC;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background: #123b61;
+}
+
+
+/* =========================================
+   PRINT
+========================================= */
+
+@media print {
+
+    html,
+    body {
+        background: #ffffff;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .print-page {
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+
+        padding: 5px;
+
+        box-shadow: none;
+    }
+
+    .print-button {
+        display: none;
+    }
+
+    .print-footer {
+        border-top: none;
+
+        margin-top: 25px;
+    }
+
+    .results-table {
+        page-break-inside: auto;
+    }
+
+    .results-table tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+
+    .results-table thead {
+        display: table-header-group;
+    }
+
+    @page {
+        size: A4 landscape;
+        margin: 12mm;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 800px) {
+
+    .print-page {
+        max-width: calc(100% - 20px);
+
+        margin: 10px auto;
+
+        padding: 20px;
+    }
+
+    .print-header {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .student-information {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result-summary {
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .print-footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .student-information {
+        grid-template-columns: 1fr;
+    }
+
+    .academy-name h1 {
+        font-size: 24px;
+    }
+
+}
+.print-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.back-button,
+.print-button {
+    border: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-button {
+    background: #EAE6BC;
+    color: #0A2947;
+}
+
+.back-button:hover {
+    background: #d9d49f;
+}
+
+.print-button {
+    background: #0A2947;
+    color: #EAE6BC;
+}
+
+.print-button:hover {
+    background: #123d63;
+}

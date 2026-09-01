@@ -780,7 +780,27 @@ $courses_result = mysqli_query($conn, $courses_sql);
 
             </a>
 
+          <a href="timetable.php">
 
+    <span>📅</span>
+
+    <span>
+        Timetable
+    </span>
+
+</a>
+ <a
+                href="fees.php"
+              
+            >
+
+                <span>📅</span>
+
+                <span>
+                    Fees
+                </span>
+
+            </a>
             <a
                 href="logout.php"
                 class="logout-link"

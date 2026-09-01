@@ -128,7 +128,27 @@ $totalNotices = getCount($conn, 'notices');
                 <span>📢</span>
                 <span>Post Notice</span>
             </a>
+          <a href="timetable.php">
 
+    <span>📅</span>
+
+    <span>
+        Timetable
+    </span>
+
+</a>
+ <a
+                href="fees.php"
+              
+            >
+
+                <span>📅</span>
+
+                <span>
+                    Fees
+                </span>
+
+            </a>
             <a href="logout.php" class="logout-link">
                 <span>🚪</span>
                 <span>Logout</span>

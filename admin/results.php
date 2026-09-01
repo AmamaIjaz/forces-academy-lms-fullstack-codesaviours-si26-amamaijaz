@@ -49,6 +49,11 @@ $result = mysqli_query($conn, $sql);
 if (!$result) {
     die("Database Error: " . mysqli_error($conn));
 }
+$success = '';
+
+if (isset($_GET['updated'])) {
+    $success = "Result updated successfully.";
+}
 
 ?>
 
@@ -147,8 +152,27 @@ if (!$result) {
                 <span>Post Notice</span>
 
             </a>
+          <a href="timetable.php">
 
+    <span>📅</span>
 
+    <span>
+        Timetable
+    </span>
+
+</a>
+ <a
+                href="fees.php"
+              
+            >
+
+                <span>📅</span>
+
+                <span>
+                    Fees
+                </span>
+
+            </a>
             <a href="logout.php" class="logout-link">
 
                 <span>🚪</span>
@@ -188,6 +212,13 @@ if (!$result) {
             </div>
 
         </div>
+        <?php if (!empty($success)): ?>
+
+    <div class="result-success">
+        <?= htmlspecialchars($success) ?>
+    </div>
+
+<?php endif; ?>
 
 
         <!-- =========================

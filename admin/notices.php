@@ -283,8 +283,27 @@ $notices_result = mysqli_query($conn, $sql);
                 </span>
 
             </a>
+          <a href="timetable.php">
 
+    <span>📅</span>
 
+    <span>
+        Timetable
+    </span>
+
+</a>
+ <a
+                href="fees.php"
+              
+            >
+
+                <span>📅</span>
+
+                <span>
+                    Fees
+                </span>
+
+            </a>
             <a
                 href="logout.php"
                 class="logout-link"

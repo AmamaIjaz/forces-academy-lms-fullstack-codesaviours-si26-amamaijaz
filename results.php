@@ -90,6 +90,7 @@ if ($stmt) {
         <h2>Forces Academy</h2>
 
         <p>Student Portal</p>
+        
 
         <nav class="sidebar-nav">
 
@@ -115,7 +116,17 @@ if ($stmt) {
             <a href="notices.php">
                 Notices
             </a>
-
+          <a href="timetable.php">
+        Timetable
+</a>
+    <a href="profile.php">
+    
+    My Profile
+</a>
+</a>
+ <a href="fees.php" >
+                My Fees
+            </a>
             <a
                 href="logout.php"
                 class="logout"
@@ -135,10 +146,18 @@ if ($stmt) {
         <div class="page-header">
 
             <h1>My Results</h1>
+            
 
             <p>
                 View your academic performance.
             </p>
+            <a
+    href="print_results.php"
+    class="print-results-btn"
+    target="_blank"
+>
+    🖨 Print Results
+</a>
 
         </div>
 
